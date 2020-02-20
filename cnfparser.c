@@ -2,9 +2,6 @@
 #define BUFF_SIZE 256
 #define PATH_SIZE 256
 
-// 改我
-char base_path[PATH_SIZE] = "C:\\Users\\vince\\Desktop\\程序设计课设\\指导\\SAT测试备选算例";
-
 status SkipComments(char* buff, FILE* fp);                                    // 跳过comment
 status GetPInfo(char* buff, int* var_num, int* clause_num);                   // 获得p行中记录的子句和变元数量
 ClauseNode* ReadClauses(char* buff, FILE* fp, int* var_num, int clause_num);  // 读取并储存子句
@@ -13,6 +10,9 @@ LiteralNode* CreateLiteralUnit(char* buff);                                   //
 
 ClauseNode* CreateClause(int* var_num, char* filename)
 {
+    // 改我
+    char base_path[PATH_SIZE] = "C:\\Users\\vince\\Desktop\\程序设计课设\\指导\\SAT测试备选算例";
+
     int clause_num;
     char buff[BUFF_SIZE];
     ClauseNode* s;

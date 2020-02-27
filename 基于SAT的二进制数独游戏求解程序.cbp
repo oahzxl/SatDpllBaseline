@@ -31,14 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="cnfparser.c">
+		<Unit filename="cnf_parser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dpll_solver.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="head.h" />
 		<Unit filename="main.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="solver.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

@@ -1,7 +1,7 @@
 /**************************************
 *
 *             这里是头文件
-*   头文件的作用是定义全局变量与函数
+*   头文件的作用是定义全局变量与函数等
 *
 *    比如说我在这里定义了函数yyxtql()
 *     在文件solver里写了函数yyxtql()
@@ -9,7 +9,7 @@
 *
 ***************************************/
 
-#ifndef HEAD_H_INCLUDED
+#ifndef HEAD_H_INCLUDED            // 这个保证了头文件不会被重复定义
 #define HEAD_H_INCLUDED
 
 #include <stdio.h>
@@ -39,8 +39,8 @@ typedef struct ClauseNode
     struct ClauseNode* down;
 } ClauseNode;
 
-ClauseNode* CreateClause(int* var_num, char* filename);   // 读取cnf文件创建子句集
-status DPLL(ClauseNode* f, int* truth_table);             // DPLL算法
+ClauseNode* CnfParser(int* literal_num, char* filename, int init);   // 读取cnf文件创建子句集
+status DpllSolver(ClauseNode* f, int* truth_table);                  // DPLL算法
 void Get2Char();
 
-#endif                                                    // HEAD_H_INCLUDED
+#endif                                                               // HEAD_H_INCLUDED
